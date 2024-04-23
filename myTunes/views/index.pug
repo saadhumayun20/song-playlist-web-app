@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title MyTunes
+    link(rel="stylesheet", href="styles/style.css")
+  body
+    div#register-section
+      h2 Register
+      form#registration-form
+        input(type="text", id="new-username", placeholder="Username", required)
+        input(type="password", id="new-password", placeholder="Password", required)
+        button(type="submit").button-register-page Register
+
+    div#login-section
+      h2 Login
+      form#login-form
+        input(type="text", id="username", placeholder="Username", required)
+        input(type="password", id="password", placeholder="Password", required)
+        button(type="submit").button-login Login
+        button(type="button", id="register-button").button-register Register
+
+    // Main Content, initially hidden
+    div#main-content
+      header#header 
+        div#user-greeting
+          h2 Welcome, 
+            span#user-name !
+        button#logout-button Logout
+
+      div#admin-section
+
+      // Search Section
+      div#search-section
+        input(type="text", id="song-title", placeholder="Search songs ...")
+        button#submit-button Search
+        h2#search-results-heading
+        table#search-results-table
+
+      div#songs-display-area
+
+      // Playlist Section
+      div#playlist-section
+        h2 Your Playlists
+        button#create-playlist-button Create New Playlist
+        button#remove-playlist-button Remove Playlist
+        div#playlists
+          each playlist in playlists
+            div.playlist-item(data-playlist-id=playlist.id)
+              span.clickable-playlist.playlist-name= playlist.name
+
+      div#create-playlist-modal(style="display:none;")
+        form#create-playlist-form
+          input(type="text", id="playlist-name", placeholder="Enter Playlist Name", required)
+          button(type="submit") Create
+
+      
+    script(src="/js/script.js")

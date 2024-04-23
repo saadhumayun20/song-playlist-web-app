@@ -1,0 +1,279 @@
+/* Sets up font styles */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Style for the header*/
+#header {
+  background-color: #333;
+  color: white;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-greeting {
+  margin: 0;
+}
+
+/* Logout button styling*/
+#logout-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: -7.5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#logout-button:hover {
+  background-color: #c0392b;
+}
+
+#playlist-area,
+#input-area,
+#search-results-area {
+  margin-bottom: 20px;
+}
+
+/* Login and register page stylinh*/
+#login-section,
+#register-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 40px 60px;
+  margin-top: 50px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-section:hover,
+#register-section:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Various styles for different buttons*/
+.button-register {
+  background-color: #55abf6;
+}
+
+.button-register:hover {
+  background-color: #025aa5;
+}
+
+.button-register-page {
+  background-color: #55abf6;
+}
+
+.button-register-page:hover {
+  background-color: #025aa5;
+}
+
+.button-login {
+  background-color: #55abf6;
+}
+
+.button-login:hover {
+  background-color: #025aa5;
+}
+
+/* Styles for items in the main page, including playlists, tables for song search and their buttons etc.*/
+#main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+  #playlist-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+
+  #search-section {
+    width: 50%;
+    float: right;
+    padding-right: 40px;
+    margin-top: 47px;
+  }
+
+  table {
+    float: right;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 0;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .add-song-button,
+  .playlist-button {
+    cursor: pointer;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .add-song-button {
+    background-color: #28A745;
+  }
+
+  .add-song-button:hover {
+    background-color: #218838;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .album-art {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .clickable-playlist {
+    cursor: default;
+  }
+
+  #playlist-songs-container {
+    display: none;
+
+  }
+
+  .playlist-songs-container {
+    float: right;
+    margin-right: 300px;
+    margin-top: 100px;
+  }
+
+  .playlist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .playlist-name {
+    flex-grow: 1;
+  }
+
+  .remove-playlist-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+
+  .remove-playlist-button:hover {
+    background-color: #d32f2f;
+  }
+
+  #view-users-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    margin-right: -10px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 30px;
+  }
+
+  #view-users-button:hover {
+    background-color: #0056b3;
+  }
+
+  #submit-button {
+    background-color: #555555;
+  }
+
+  #submit-button:hover {
+    background-color: #6e6e6e;
+  }
+
+  #create-playlist-button,
+  #remove-playlist-button {
+    background-color: #0275d8;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+  }
+
+  #create-playlist-button:hover,
+  #remove-playlist-button:hover {
+    background-color: #025aa5;
+  }
+
+  #song-title {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: calc(100% - 22px);
+  }
+
+  #controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15;
+  }
+
+  .playlist-item {
+    background-color: white;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .playlist-item:hover {
+    background-color: #f9f9f9;
+  }
+
+  .remove-song-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .remove-song-button:hover {
+    background-color: #c82333;
+  }
